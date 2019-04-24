@@ -5,7 +5,6 @@
  */
 package databases;
 
-import com.mycompany.krokhomework12.MainApp;
 import exception.DataBaseDisconnectEx;
 import exception.DataBaseEx;
 import java.sql.Connection;
@@ -26,6 +25,7 @@ public abstract class DataBaseConnection {
     protected Statement stmt;
 
     protected DataBaseConnection() throws DataBaseEx {
+        log.debug("run addStudent()");
         try {
             Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection("jdbc:sqlite:main.db");
@@ -63,5 +63,4 @@ public abstract class DataBaseConnection {
         log.info("Connection закрыт");
     }
 
-    public abstract void dropAndcreateTable() throws SQLException;
 }

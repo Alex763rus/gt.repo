@@ -83,7 +83,6 @@ public class StudentDB extends DataBaseConnection {
         }
     }
 
-    @Override
     public void dropAndcreateTable() throws StudentSQLEx {
         log.debug("run dropAndcreateTable()");
         try {

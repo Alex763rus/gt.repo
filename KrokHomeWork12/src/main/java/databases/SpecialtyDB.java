@@ -38,7 +38,8 @@ public class SpecialtyDB extends DataBaseConnection {
             while (rs.next()) {
                 specialtys.add(new Specialty(rs.getInt("id"), rs.getString("name"), rs.getString("description")));
             }
-        } catch (SQLException e) {
+        } catch (SQLException ex) {
+            log.error(ex);
             throw new SpecialtySQLEx();
         }
         return specialtys;
@@ -75,7 +76,6 @@ public class SpecialtyDB extends DataBaseConnection {
         return 0;
     }
 
-    @Override
     public void dropAndcreateTable() throws SpecialtySQLEx {
         log.debug("run dropAndcreateTable()");
         try {
@@ -89,7 +89,7 @@ public class SpecialtyDB extends DataBaseConnection {
             log.error(ex);
             throw new SpecialtySQLEx();
         }
-         log.info("DROP AND CREATE SPECIALTY");
+        log.info("DROP AND CREATE SPECIALTY");
     }
 
 }

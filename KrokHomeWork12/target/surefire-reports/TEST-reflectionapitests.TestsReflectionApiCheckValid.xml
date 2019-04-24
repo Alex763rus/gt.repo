@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="studenttests.TestsStudentsData" time="3.172" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="reflectionapitests.TestsReflectionApiCheckValid" time="3.297" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_91\jre\bin"/>
@@ -14,7 +14,7 @@
     <property name="user.country" value="RU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="test" value="studenttests.TestsStudentsData"/>
+    <property name="test" value="reflectionapitests.TestsReflectionApiCheckValid"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\Алексей\Documents\NetBeansProjects\GIT_REPO\KrokHomeWork12"/>
     <property name="java.runtime.version" value="1.8.0_91-b15"/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_91\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=studenttests.TestsStudentsData -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.1\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=reflectionapitests.TestsReflectionApiCheckValid -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.1\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="ru"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -62,12 +62,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="studenttests.TestsStudentsData" name="testStudentsDataSpecialtyId[0]" time="1.281"/>
-  <testcase classname="studenttests.TestsStudentsData" name="testStudentsDataName[0]" time="0"/>
-  <testcase classname="studenttests.TestsStudentsData" name="testStudentsDataAverageScore[0]" time="0"/>
-  <testcase classname="studenttests.TestsStudentsData" name="testStudentsEquals[0]" time="0.016"/>
-  <testcase classname="studenttests.TestsStudentsData" name="testStudentsDataSpecialtyId[1]" time="0"/>
-  <testcase classname="studenttests.TestsStudentsData" name="testStudentsDataName[1]" time="0"/>
-  <testcase classname="studenttests.TestsStudentsData" name="testStudentsDataAverageScore[1]" time="0"/>
-  <testcase classname="studenttests.TestsStudentsData" name="testStudentsEquals[1]" time="0.016"/>
+  <testcase classname="reflectionapitests.TestsReflectionApiCheckValid" name="testsCheckValid[0]" time="2.953"/>
+  <testcase classname="reflectionapitests.TestsReflectionApiCheckValid" name="testsCheckValid[1]" time="0"/>
+  <testcase classname="reflectionapitests.TestsReflectionApiCheckValid" name="testsCheckValid[2]" time="0"/>
 </testsuite>

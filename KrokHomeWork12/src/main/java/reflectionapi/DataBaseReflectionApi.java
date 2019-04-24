@@ -5,13 +5,22 @@
  */
 package reflectionapi;
 
+import exception.SpecialtySQLEx;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
+import student.Student;
+import university.Specialty;
 
 /**
  *
@@ -26,11 +35,12 @@ public class DataBaseReflectionApi {
         connect();
     }
 
-//    public void save(List<Object> objects) {
-//        for (Object object : objects) {
-//            save(object);
-//        }
-//    }
+    public void save(List objects) throws IllegalArgumentException, IllegalAccessException {
+        for (Object object : objects) {
+            save(object);
+        }
+    }
+
     public void save(Object object) throws IllegalArgumentException, IllegalAccessException {
         Class cls = object.getClass();
         if (!cls.isAnnotationPresent(XTable.class)) {
@@ -133,110 +143,50 @@ public class DataBaseReflectionApi {
         }
     }
 
-//    public Object read(Class cls) {
-//        List products = new ArrayList();
-//        PreparedStatement psStmt = null;
-//        try {
-//            psStmt = connection.prepareStatement("SELECT id, name, cost, quantity FROM product WHERE name = ? ;");
-//            psStmt.setString(1, name);
-//            ResultSet rs = psStmt.executeQuery();
-//            while (rs.next()) {
-//                products.add(new Product(rs.getInt("id"), rs.getString("name"), rs.getFloat("cost"), rs.getInt("quantity")));
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        } finally {
-//            closeStatement(psStmt);
-//        }
-//        return products;
-//    }
-//    public List<Grocery> getProducts(float quantityStart, float quantityEnd) {
-//        List products = new ArrayList();
-//        PreparedStatement psStmt = null;
-//        try {
-//            psStmt = connection.prepareStatement("SELECT id, name, cost, quantity FROM product WHERE cost BETWEEN ? and ? ;");
-//            psStmt.setFloat(1, quantityStart);
-//            psStmt.setFloat(2, quantityEnd);
-//            ResultSet rs = psStmt.executeQuery();
-//            while (rs.next()) {
-//                products.add(new Product(rs.getInt("id"), rs.getString("name"), rs.getFloat("cost"), rs.getInt("quantity")));
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        } finally {
-//            closeStatement(psStmt);
-//        }
-//        return products;
-//    }
-//    public List<Grocery> getProducts() {
-//        List products = new ArrayList();
-//        Statement stmt = null;
-//        try {
-//            stmt = connection.createStatement();
-//            ResultSet rs = stmt.executeQuery("SELECT id, name, cost, quantity FROM product");
-//            while (rs.next()) {
-//                products.add(new Product(rs.getInt("id"), rs.getString("name"), rs.getFloat("cost"), rs.getInt("quantity")));
-//            }
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        } finally {
-//            closeStatement(stmt);
-//        }
-//        return products;
-//    }
-//    public void deleteProduct(int id) {
-//        PreparedStatement psStmt = null;
-//        try {
-//            psStmt = connection.prepareStatement("DELETE FROM product WHERE id = ?;");
-//            psStmt.setInt(1, id);
-//            psStmt.addBatch();
-//            psStmt.executeBatch();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        } finally {
-//            closeStatement(psStmt);
-//        }
-//    }
-//    public void addProduct(Grocery grocery) {
-//        PreparedStatement psStmt = null;
-//        try {
-//            psStmt = connection.prepareStatement("INSERT INTO product (name, cost, quantity) VALUES (?, ?, ?);");
-//            psStmt.setString(1, grocery.getName());
-//            psStmt.setFloat(2, grocery.getCost());
-//            psStmt.setInt(3, grocery.getQuantity());
-//            psStmt.addBatch();
-//            psStmt.executeBatch();
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        } finally {
-//            closeStatement(psStmt);
-//        }
-//
-//    }
-//    public void dropAndCreateTable() {
-//        Statement stmt = null;
-//        try {
-//            stmt = connection.createStatement();
-//            stmt.executeUpdate("DROP TABLE IF EXISTS product;");
-//            stmt.executeUpdate("CREATE TABLE product (\n"
-//                    + "        id    INTEGER PRIMARY KEY AUTOINCREMENT,\n"
-//                    + "        name  TEXT,\n"
-//                    + "        cost  REAL,\n"
-//                    + "        quantity INTEGER\n"
-//                    + "    );");
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        } finally {
-//            closeStatement(stmt);
-//        }
-//    }
-//    private void closeStatement(Statement statement) {
-//        try {
-//            statement.close();
-//        } catch (SQLException ex) {
-//            ex.printStackTrace();
-//        }
-//    }
+    public Object read(Class cls) throws NoSuchMethodException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        if (!cls.isAnnotationPresent(XTable.class)) {
+            throw new RuntimeException("Тут надо доделать!");
+        }
+        StringBuilder builder = new StringBuilder();
+        builder.append("SELECT ");
+        Field[] fields = cls.getDeclaredFields();
+        for (Field field : fields) {
+            field.setAccessible(true);
+            if (field.isAnnotationPresent(XField.class)) {
+                builder.append(field.getName()).append(", ");
+            }
+        }
+        builder.setLength(builder.length() - 2);
+        builder.append(" FROM ");
+        builder.append(((XTable) cls.getAnnotation(XTable.class)).title());
+        List<Object> clsGet = new ArrayList();
+        try {
+
+            Object object = cls.newInstance();
+            PreparedStatement psStmt = connection.prepareStatement(builder.toString());
+            ResultSet rs = psStmt.executeQuery();
+            while (rs.next()) {
+                for (Field field : fields) {
+                    field.setAccessible(true);
+                    if (field.isAnnotationPresent(XField.class)) {
+                        field.setAccessible(true);
+                        if (field.isAnnotationPresent(XField.class)) {
+                            if (field.getType().toString().equals("float")) {
+                                field.set(object, Float.valueOf(rs.getObject(field.getName()).toString()));
+                            } else {
+                                field.set(object, rs.getObject(field.getName()));
+                            }
+                        }
+                    }
+                }
+                clsGet.add(object);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return clsGet;
+    }
+
     private void connect() {
         try {
             Class.forName("org.sqlite.JDBC");

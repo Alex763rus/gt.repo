@@ -1,0 +1,20 @@
+INFO  2019-04-23 20:54:08 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:56) - TEQE1
+INFO  2019-04-23 20:54:08 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:57) - TEQE2
+INFO  2019-04-23 20:54:08 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:59) - Root Logger: TEQE3
+INFO  2019-04-23 20:55:11 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:56) - TEQE1
+INFO  2019-04-23 20:55:11 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:57) - TEQE2
+INFO  2019-04-23 20:55:11 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:59) - Root Logger: TEQE3
+INFO  2019-04-23 20:57:14 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:54) - TEQE1
+INFO  2019-04-23 20:57:14 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:55) - TEQE2
+INFO  2019-04-23 20:57:14 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:57) - Root Logger: TEQE3
+INFO  2019-04-23 21:17:33 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:39) - TEQE2
+INFO  2019-04-23 21:19:02 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:36) - TEQE2
+DEBUG 2019-04-23 21:19:02 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:37) - dabug
+INFO  2019-04-23 21:20:22 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:36) - TEQE2
+DEBUG 2019-04-23 21:20:22 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:37) - dabug
+INFO  2019-04-23 21:20:45 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:36) - TEQE2
+DEBUG 2019-04-23 21:20:45 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:37) - dabug
+INFO  2019-04-23 21:21:51 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:36) - TEQE2
+DEBUG 2019-04-23 21:21:51 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:37) - dabug
+INFO  2019-04-23 21:22:17 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:36) - TEQE2
+DEBUG 2019-04-23 21:22:17 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:37) - dabug

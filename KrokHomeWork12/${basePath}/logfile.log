@@ -1,0 +1,468 @@
+DEBUG 2019-04-23 22:03:47 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:36) - StartHomeWork12
+INFO  2019-04-23 22:03:48 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 22:03:48 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 22:03:48 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 22:03:48 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+ERROR 2019-04-23 22:03:55 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:128) - java.lang.NumberFormatException: For input string: "qwe"
+INFO  2019-04-23 22:03:55 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:153) - Ошибка! Неверно указаны аргументы:[qwe]
+DEBUG 2019-04-23 22:04:04 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:139) - Конец работы
+INFO  2019-04-23 22:04:04 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 22:04:05 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 22:04:05 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 22:04:05 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+DEBUG 2019-04-23 22:04:44 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:36) - StartHomeWork12
+INFO  2019-04-23 22:04:45 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 22:04:45 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 22:04:45 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 22:04:45 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+ERROR 2019-04-23 22:04:55 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:128) - java.lang.NumberFormatException: For input string: "qq"
+INFO  2019-04-23 22:04:55 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:153) - Ошибка! Неверно указаны аргументы:[qq]
+ERROR 2019-04-23 22:05:00 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:128) - java.lang.ArrayIndexOutOfBoundsException: 1
+INFO  2019-04-23 22:05:00 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:153) - Ошибка! Неверно указаны аргументы:[2]
+DEBUG 2019-04-23 22:05:04 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:139) - Конец работы
+INFO  2019-04-23 22:05:04 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 22:05:04 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 22:05:04 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 22:05:04 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+ERROR 2019-04-23 22:15:49 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: 
+ERROR 2019-04-23 22:15:49 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+DEBUG 2019-04-23 22:20:33 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:36) - StartHomeWork12
+INFO  2019-04-23 22:20:34 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 22:20:34 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 22:20:34 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 22:20:34 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+ERROR 2019-04-23 22:20:58 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: 
+ERROR 2019-04-23 22:20:58 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:20:58 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: Tests\empt.json (Системе не удается найти указанный путь)
+ERROR 2019-04-23 22:20:58 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:34:17 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: Tests\studData1.json (Системе не удается найти указанный путь)
+ERROR 2019-04-23 22:34:17 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:35:29 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: Tests\studData1.json (Системе не удается найти указанный путь)
+ERROR 2019-04-23 22:35:29 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:37:04 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: Tests\studData1.json (Системе не удается найти указанный путь)
+ERROR 2019-04-23 22:37:04 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:38:11 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: Tests\studData1.json (Системе не удается найти указанный путь)
+ERROR 2019-04-23 22:38:11 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:40:09 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: src\main\resources\Tests (Отказано в доступе)
+ERROR 2019-04-23 22:40:09 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+DEBUG 2019-04-23 22:41:05 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:36) - StartHomeWork12
+INFO  2019-04-23 22:41:07 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 22:41:07 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 22:41:07 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 22:41:07 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: src\main\resources\Tests\studData2.json (Не удается найти указанный файл)
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: src\main\resources\Tests\studData2.json (Не удается найти указанный файл)
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: src\main\resources\Tests\studData2.json (Не удается найти указанный файл)
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: src\main\resources\Tests\studData2.json (Не удается найти указанный файл)
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: src\main\resources\Tests\studData3.json (Не удается найти указанный файл)
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: src\main\resources\Tests\studData3.json (Не удается найти указанный файл)
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: src\main\resources\Tests\studData3.json (Не удается найти указанный файл)
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: src\main\resources\Tests\studData3.json (Не удается найти указанный файл)
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: src\main\resources\Tests\studData4.json (Не удается найти указанный файл)
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: src\main\resources\Tests\studData4.json (Не удается найти указанный файл)
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: src\main\resources\Tests\studData4.json (Не удается найти указанный файл)
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:99) - java.io.FileNotFoundException: src\main\resources\Tests\studData4.json (Не удается найти указанный файл)
+ERROR 2019-04-23 22:51:49 [main] student.Student (Student.java:105) - java.lang.NullPointerException
+DEBUG 2019-04-23 22:56:20 [main] com.mycompany.krokhomework12.MainApp (MainApp.java:36) - StartHomeWork12
+INFO  2019-04-23 22:56:21 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 22:56:21 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 22:56:21 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 22:56:21 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:16:45 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:16:45 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:16:45 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:16:46 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:16:46 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:16:46 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:18:03 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:18:03 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:18:04 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:18:04 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:18:04 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:18:04 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:18:36 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:18:36 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:18:37 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:18:37 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:18:37 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:18:37 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:20:41 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:20:41 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:20:42 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:20:42 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:20:42 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:20:42 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:20:42 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:20:42 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:20:42 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:20:42 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:23:03 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:23:03 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:23:03 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:23:03 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:23:03 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:23:03 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:23:03 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:23:03 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:23:03 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:23:03 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:23:03 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:23:03 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:23:03 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:23:03 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:23:03 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:27:14 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:14 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:14 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:14 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:14 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:27:15 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:27:15 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:27:15 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:27:15 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:15 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:15 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:15 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:15 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:27:15 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:27:15 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:27:15 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:27:15 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:15 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:15 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:15 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:15 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:27:16 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:27:16 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:27:16 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:27:16 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:16 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:16 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:16 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:16 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:27:16 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:27:16 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:27:16 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:27:55 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:55 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:55 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:55 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:55 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:27:55 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:27:55 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:27:55 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:27:55 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:55 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:55 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:55 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:56 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:27:56 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:27:56 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:27:56 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:27:56 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:56 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:56 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:56 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:56 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:27:56 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:27:56 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:27:56 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:27:56 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:56 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:56 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:27:56 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:27:56 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:27:56 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:27:57 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:27:57 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:33:03 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:33:03 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:33:03 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:33:03 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:33:04 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:33:04 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:33:04 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:33:04 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:33:04 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:33:04 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:33:04 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:33:04 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:33:04 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:33:04 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:33:04 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:33:04 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:33:04 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:33:04 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:33:04 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:33:04 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:33:05 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:33:05 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:33:05 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:33:05 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:33:05 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:33:05 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:33:05 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:33:05 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:33:05 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:33:05 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:33:05 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:33:05 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:34:39 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:34:39 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:34:39 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:34:39 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:34:39 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:34:39 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:34:39 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:34:39 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:34:39 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:34:39 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:34:39 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:34:39 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:34:39 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:34:40 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:34:40 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:34:40 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:34:40 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:34:40 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:34:40 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:34:40 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:34:40 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:34:40 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:34:40 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:34:40 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:34:40 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:34:40 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:34:40 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:34:40 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:34:40 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:34:40 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:34:40 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:34:40 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:36:10 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:36:10 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:36:10 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:36:10 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:36:10 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:36:10 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:36:10 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:36:10 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:36:10 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:36:10 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:36:10 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:36:10 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:36:10 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:36:11 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:36:11 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:36:11 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:36:11 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:36:11 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:36:11 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:36:11 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:36:11 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:36:11 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:36:11 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:36:11 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:36:11 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:36:11 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:36:11 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:36:11 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:36:11 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:36:11 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:36:12 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:36:12 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:37:48 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:37:48 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:37:48 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:37:48 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:37:48 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:37:48 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:37:48 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:37:48 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:37:48 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:37:48 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:37:48 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:37:48 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:37:49 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:37:49 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:37:49 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:37:49 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:37:49 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:37:49 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:37:49 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:37:49 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:37:49 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:37:49 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:37:49 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:37:49 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:37:49 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:37:49 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:37:49 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:37:49 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:37:49 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:37:50 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:37:50 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:37:50 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:38:41 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:38:41 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:38:41 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:38:41 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:38:41 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:38:42 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:38:42 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:38:42 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:38:42 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:38:42 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:38:42 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:38:42 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:38:42 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:38:42 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:38:42 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:38:42 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:38:42 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:38:42 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:38:42 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:38:42 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:38:42 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:38:43 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:38:43 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:38:43 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:38:43 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:38:43 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:38:43 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:38:43 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:38:43 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:38:43 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:38:43 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:38:43 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:46:49 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:46:49 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:46:49 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:46:49 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:46:49 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:46:49 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:46:49 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:46:49 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:46:49 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:46:49 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:46:49 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:46:49 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:46:49 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:46:49 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:46:50 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:46:50 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:46:50 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:46:50 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:46:50 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:46:50 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:46:50 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:46:50 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:46:50 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:46:50 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:48:31 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:48:31 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:48:31 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:48:31 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:48:32 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:48:32 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:48:32 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:48:32 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:48:32 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:48:32 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:48:32 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:48:32 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:48:32 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:48:32 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:48:32 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:48:32 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:48:32 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:48:32 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:48:32 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:48:32 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:48:33 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:48:33 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:48:33 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:48:33 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:52:05 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:52:05 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:52:05 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:52:05 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:52:05 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:52:05 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:52:05 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:52:05 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:52:05 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:52:05 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:52:05 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:52:05 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:52:05 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:52:06 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:52:06 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:52:06 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:52:06 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:52:06 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:52:06 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:52:06 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:52:06 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:52:06 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:52:06 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:52:06 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:53:12 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:53:12 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:53:12 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:53:12 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:53:12 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:53:12 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:53:12 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:53:12 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:53:12 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:53:12 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:53:12 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:53:12 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:53:12 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:53:12 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:53:13 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:53:13 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:53:13 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:53:13 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:53:13 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:53:13 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:53:13 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:53:13 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:53:13 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:53:13 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:55:00 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:55:00 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:55:00 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:55:00 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:55:00 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:55:00 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:55:00 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:55:00 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:55:00 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:55:00 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:55:00 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:55:00 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:55:00 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:55:01 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:55:01 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:55:01 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт
+INFO  2019-04-23 23:55:01 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:55:01 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:55:01 [main] databases.DataBaseConnection (DataBaseConnection.java:32) - Connection открыт
+INFO  2019-04-23 23:55:01 [main] databases.DataBaseConnection (DataBaseConnection.java:34) - Statement открыт
+INFO  2019-04-23 23:55:01 [main] databases.StudentDB (StudentDB.java:102) - DROP AND CREATE STUDENT
+INFO  2019-04-23 23:55:01 [main] databases.SpecialtyDB (SpecialtyDB.java:92) - DROP AND CREATE SPECIALTY
+INFO  2019-04-23 23:55:01 [main] databases.DataBaseConnection (DataBaseConnection.java:56) - Statement закрыт
+INFO  2019-04-23 23:55:01 [main] databases.DataBaseConnection (DataBaseConnection.java:63) - Connection закрыт

@@ -5,46 +5,50 @@
  */
 package reflectionapi;
 
-import exception.SpecialtySQLEx;
-import java.lang.reflect.Constructor;
+import databases.DataBaseConnection;
+import exception.ClassValidationEx;
+import exception.DataBaseEx;
+import exception.NullObjectEx;
+import exception.ReflectiomApiNotAccessEx;
+import exception.ReflectionApiEx;
+import exception.ReflectionApiSQLEx;
+import exception.ReflectionClassNotFoundEx;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import student.Student;
-import university.Specialty;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  *
  * @author grigorevap
  */
-public class DataBaseReflectionApi {
+public class DataBaseReflectionApi extends DataBaseConnection {
 
-    private static Connection connection;
-    private static Statement stmt;
+    static final Logger log = LogManager.getLogger(DataBaseConnection.class);
 
-    public DataBaseReflectionApi() {
-        connect();
+    public DataBaseReflectionApi() throws DataBaseEx {
     }
 
-    public void save(List objects) throws IllegalArgumentException, IllegalAccessException {
+    public void save(List objects) throws ReflectionApiSQLEx, ReflectiomApiNotAccessEx, ClassValidationEx, NullObjectEx {
         for (Object object : objects) {
             save(object);
         }
     }
 
-    public void save(Object object) throws IllegalArgumentException, IllegalAccessException {
+    public void save(Object object) throws ReflectionApiSQLEx, ReflectiomApiNotAccessEx, ClassValidationEx, NullObjectEx {
+        log.debug("run save()");
+        if (object == null) {
+            throw new NullObjectEx();
+        }
         Class cls = object.getClass();
-        if (!cls.isAnnotationPresent(XTable.class)) {
-            throw new RuntimeException("Тут надо доделать!");
+        if (!checkValidClass(cls)) {
+            log.error("checkValidClass = false " + cls.getName());
+            throw new ClassValidationEx();
         }
         StringBuilder builder = new StringBuilder();
         builder.append("INSERT INTO ");
@@ -54,8 +58,13 @@ public class DataBaseReflectionApi {
         for (Field field : fields) {
             field.setAccessible(true);
             if (field.isAnnotationPresent(XField.class)) {
-                if (field.isAnnotationPresent(Autoincrement.class) && (int) field.get(object) == 0) {
-                    continue;
+                try {
+                    if (field.isAnnotationPresent(Autoincrement.class) && (int) field.get(object) == 0) {
+                        continue;
+                    }
+                } catch (IllegalAccessException ex) {
+                    log.error(ex);
+                    throw new ReflectiomApiNotAccessEx(field.getName());
                 }
                 builder.append(field.getName()).append(", ");
             }
@@ -66,8 +75,13 @@ public class DataBaseReflectionApi {
         for (Field field : fields) {
             field.setAccessible(true);
             if (field.isAnnotationPresent(XField.class)) {
-                if (field.isAnnotationPresent(Autoincrement.class) && (int) field.get(object) == 0) {
-                    continue;
+                try {
+                    if (field.isAnnotationPresent(Autoincrement.class) && (int) field.get(object) == 0) {
+                        continue;
+                    }
+                } catch (IllegalAccessException ex) {
+                    log.error(ex);
+                    throw new ReflectiomApiNotAccessEx(field.getName());
                 }
                 builder.append("?, ");
             }
@@ -88,14 +102,55 @@ public class DataBaseReflectionApi {
                 }
             }
             ps.executeUpdate();
-        } catch (SQLException | IllegalAccessException ex) {
-            ex.printStackTrace();
+        } catch (SQLException ex) {
+            log.error(ex);
+            throw new ReflectionApiSQLEx();
+        } catch (IllegalAccessException ex) {
+            log.error(ex);
+            throw new ReflectiomApiNotAccessEx();
         }
     }
 
-    public void createTable(Class cls) {
+    public boolean checkValidClass(Class cls) {
+        log.debug("run checkValidClass()");
         if (!cls.isAnnotationPresent(XTable.class)) {
-            throw new RuntimeException("Тут надо доделать!");
+            return false;
+        }
+        Field[] fields = cls.getDeclaredFields();
+        for (Field field : fields) {
+            if (field.isAnnotationPresent(XField.class)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean checkValidClass(String fullClassName) {
+        try {
+            return checkValidClass(getClassForName(fullClassName));
+        } catch (ReflectionClassNotFoundEx ex) {
+            return false;
+        }
+    }
+
+    public Class getClassForName(String fullClassName) throws ReflectionClassNotFoundEx {
+        try {
+            return Class.forName(fullClassName);
+        } catch (ClassNotFoundException ex) {
+            log.error(ex);
+            throw new ReflectionClassNotFoundEx();
+        }
+    }
+
+    public void createTable(String fullClassName) throws ReflectionClassNotFoundEx, ReflectionApiSQLEx, ClassValidationEx {
+        createTable(getClassForName(fullClassName));
+    }
+
+    public void createTable(Class cls) throws ReflectionApiSQLEx, ClassValidationEx {
+        log.debug("run createTable()");
+        if (!checkValidClass(cls)) {
+            log.error("checkValidClass = false " + cls.getName());
+            throw new ClassValidationEx();
         }
         HashMap<Class, String> converter = new HashMap();
         converter.put(String.class, "TEXT");
@@ -125,13 +180,20 @@ public class DataBaseReflectionApi {
         try {
             stmt.executeUpdate(builder.toString());
         } catch (SQLException ex) {
-            ex.printStackTrace();
+            log.error(ex);
+            throw new ReflectionApiSQLEx();
         }
     }
 
-    public void dropTable(Class cls) {
-        if (!cls.isAnnotationPresent(XTable.class)) {
-            throw new RuntimeException("Тут надо доделать!");
+    public void dropTable(String fullClassName) throws ReflectionApiSQLEx, ClassValidationEx, ReflectionClassNotFoundEx {
+        dropTable(getClassForName(fullClassName));
+    }
+
+    public void dropTable(Class cls) throws ReflectionApiSQLEx, ClassValidationEx {
+        log.debug("run dropTable()");
+        if (!checkValidClass(cls)) {
+            log.error("checkValidClass = false " + cls.getName());
+            throw new ClassValidationEx();
         }
         StringBuilder builder = new StringBuilder();
         builder.append("DROP TABLE IF EXISTS ");
@@ -139,13 +201,20 @@ public class DataBaseReflectionApi {
         try {
             stmt.executeUpdate(builder.toString());
         } catch (SQLException ex) {
-            ex.printStackTrace();
+            log.error(ex);
+            throw new ReflectionApiSQLEx();
         }
     }
 
-    public Object read(Class cls) throws NoSuchMethodException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-        if (!cls.isAnnotationPresent(XTable.class)) {
-            throw new RuntimeException("Тут надо доделать!");
+    public Object read(String fullClassName) throws ClassValidationEx, ReflectionApiSQLEx, ReflectionApiEx {
+        return read(getClassForName(fullClassName));
+    }
+
+    public Object read(Class cls) throws ClassValidationEx, ReflectionApiSQLEx, ReflectionApiEx {
+        log.debug("run read()");
+        if (!checkValidClass(cls)) {
+            log.error("checkValidClass = false " + cls.getName());
+            throw new ClassValidationEx();
         }
         StringBuilder builder = new StringBuilder();
         builder.append("SELECT ");
@@ -161,7 +230,6 @@ public class DataBaseReflectionApi {
         builder.append(((XTable) cls.getAnnotation(XTable.class)).title());
         List<Object> clsGet = new ArrayList();
         try {
-
             Object object = cls.newInstance();
             PreparedStatement psStmt = connection.prepareStatement(builder.toString());
             ResultSet rs = psStmt.executeQuery();
@@ -181,32 +249,17 @@ public class DataBaseReflectionApi {
                 }
                 clsGet.add(object);
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException ex) {
+            log.error(ex);
+            throw new ReflectionApiSQLEx();
+        } catch (InstantiationException ex) {
+            log.error(ex);
+            throw new ReflectionApiEx();
+        } catch (IllegalAccessException ex) {
+            log.error(ex);
+            throw new ReflectiomApiNotAccessEx();
         }
         return clsGet;
     }
 
-    private void connect() {
-        try {
-            Class.forName("org.sqlite.JDBC");
-            connection = DriverManager.getConnection("jdbc:sqlite:main.db");
-            stmt = connection.createStatement();
-        } catch (ClassNotFoundException | SQLException ex) {
-            new RuntimeException("unable connect to database");
-        }
-    }
-
-    public void disconnect() {
-        try {
-            stmt.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        try {
-            connection.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 }

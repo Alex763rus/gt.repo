@@ -20,6 +20,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -30,8 +31,16 @@ import org.apache.logging.log4j.Logger;
 public class DataBaseReflectionApi extends DataBaseConnection {
 
     static final Logger log = LogManager.getLogger(DataBaseConnection.class);
+    private Map<Class, String> mapPstmSaveQuerys;
+    private Map<Class, String> mapPstmDropQuerys;
+    private Map<Class, String> mapPstmCreateQuerys;
+    private Map<Class, String> mapPstmReadQuerys;
 
     public DataBaseReflectionApi() throws DataBaseEx {
+        mapPstmSaveQuerys = new HashMap();
+        mapPstmDropQuerys = new HashMap();
+        mapPstmCreateQuerys = new HashMap();
+        mapPstmReadQuerys = new HashMap();
     }
 
     public void save(List objects) throws ReflectionApiSQLEx, ReflectiomApiNotAccessEx, ClassValidationEx, NullObjectEx {
@@ -40,16 +49,8 @@ public class DataBaseReflectionApi extends DataBaseConnection {
         }
     }
 
-    public void save(Object object) throws ReflectionApiSQLEx, ReflectiomApiNotAccessEx, ClassValidationEx, NullObjectEx {
-        log.debug("run save()");
-        if (object == null) {
-            throw new NullObjectEx();
-        }
+    private String getInsertPrepareStatement(Object object) throws ReflectiomApiNotAccessEx {
         Class cls = object.getClass();
-        if (!checkValidClass(cls)) {
-            log.error("checkValidClass = false " + cls.getName());
-            throw new ClassValidationEx();
-        }
         StringBuilder builder = new StringBuilder();
         builder.append("INSERT INTO ");
         builder.append(((XTable) cls.getAnnotation(XTable.class)).title());
@@ -88,8 +89,25 @@ public class DataBaseReflectionApi extends DataBaseConnection {
         }
         builder.setLength(builder.length() - 2);
         builder.append(");");
+        return builder.toString();
+    }
+
+    public void save(Object object) throws ReflectionApiSQLEx, ReflectiomApiNotAccessEx, ClassValidationEx, NullObjectEx {
+        log.debug("run save()");
+        if (object == null) {
+            throw new NullObjectEx();
+        }
+        Class cls = object.getClass();
+        if (!checkValidClass(cls)) {
+            log.error("checkValidClass = false " + cls.getName());
+            throw new ClassValidationEx();
+        }
+        if (!mapPstmSaveQuerys.containsKey(cls)) {
+            mapPstmSaveQuerys.putIfAbsent(cls, getInsertPrepareStatement(object));
+        }
+        Field[] fields = cls.getDeclaredFields();
         try {
-            PreparedStatement ps = connection.prepareStatement(builder.toString());
+            PreparedStatement ps = connection.prepareStatement(mapPstmSaveQuerys.get(cls));
             int counter = 1;
             for (Field field : fields) {
                 field.setAccessible(true);
@@ -146,12 +164,7 @@ public class DataBaseReflectionApi extends DataBaseConnection {
         createTable(getClassForName(fullClassName));
     }
 
-    public void createTable(Class cls) throws ReflectionApiSQLEx, ClassValidationEx {
-        log.debug("run createTable()");
-        if (!checkValidClass(cls)) {
-            log.error("checkValidClass = false " + cls.getName());
-            throw new ClassValidationEx();
-        }
+    private String getCreateTablePrepareStatement(Class cls) {
         HashMap<Class, String> converter = new HashMap();
         converter.put(String.class, "TEXT");
         converter.put(int.class, "INTEGER");
@@ -177,8 +190,21 @@ public class DataBaseReflectionApi extends DataBaseConnection {
         }
         builder.setLength(builder.length() - 2);
         builder.append(");");
+        return builder.toString();
+    }
+
+    public void createTable(Class cls) throws ReflectionApiSQLEx, ClassValidationEx {
+        log.debug("run createTable()");
+        if (!checkValidClass(cls)) {
+            log.error("checkValidClass = false " + cls.getName());
+            throw new ClassValidationEx();
+        }
+        if (!mapPstmCreateQuerys.containsKey(cls)) {
+            mapPstmCreateQuerys.putIfAbsent(cls, getCreateTablePrepareStatement(cls));
+        }
+        getCreateTablePrepareStatement(cls);
         try {
-            stmt.executeUpdate(builder.toString());
+            stmt.executeUpdate(mapPstmCreateQuerys.get(cls));
         } catch (SQLException ex) {
             log.error(ex);
             throw new ReflectionApiSQLEx();
@@ -189,17 +215,24 @@ public class DataBaseReflectionApi extends DataBaseConnection {
         dropTable(getClassForName(fullClassName));
     }
 
+    private String getDropTablePrepareStatement(Class cls) {
+        StringBuilder builder = new StringBuilder();
+        builder.append("DROP TABLE IF EXISTS ");
+        builder.append(((XTable) cls.getAnnotation(XTable.class)).title());
+        return builder.toString();
+    }
+
     public void dropTable(Class cls) throws ReflectionApiSQLEx, ClassValidationEx {
         log.debug("run dropTable()");
         if (!checkValidClass(cls)) {
             log.error("checkValidClass = false " + cls.getName());
             throw new ClassValidationEx();
         }
-        StringBuilder builder = new StringBuilder();
-        builder.append("DROP TABLE IF EXISTS ");
-        builder.append(((XTable) cls.getAnnotation(XTable.class)).title());
+        if (!mapPstmDropQuerys.containsKey(cls)) {
+            mapPstmDropQuerys.putIfAbsent(cls, getDropTablePrepareStatement(cls));
+        }
         try {
-            stmt.executeUpdate(builder.toString());
+            stmt.executeUpdate(mapPstmDropQuerys.get(cls));
         } catch (SQLException ex) {
             log.error(ex);
             throw new ReflectionApiSQLEx();
@@ -210,12 +243,7 @@ public class DataBaseReflectionApi extends DataBaseConnection {
         return read(getClassForName(fullClassName));
     }
 
-    public Object read(Class cls) throws ClassValidationEx, ReflectionApiSQLEx, ReflectionApiEx {
-        log.debug("run read()");
-        if (!checkValidClass(cls)) {
-            log.error("checkValidClass = false " + cls.getName());
-            throw new ClassValidationEx();
-        }
+    private String getReadPrepareStatement(Class cls) {
         StringBuilder builder = new StringBuilder();
         builder.append("SELECT ");
         Field[] fields = cls.getDeclaredFields();
@@ -228,10 +256,23 @@ public class DataBaseReflectionApi extends DataBaseConnection {
         builder.setLength(builder.length() - 2);
         builder.append(" FROM ");
         builder.append(((XTable) cls.getAnnotation(XTable.class)).title());
+        return builder.toString();
+    }
+
+    public Object read(Class cls) throws ClassValidationEx, ReflectionApiSQLEx, ReflectionApiEx {
+        log.debug("run read()");
+        if (!checkValidClass(cls)) {
+            log.error("checkValidClass = false " + cls.getName());
+            throw new ClassValidationEx();
+        }
+        if (!mapPstmReadQuerys.containsKey(cls)) {
+            mapPstmReadQuerys.putIfAbsent(cls, getReadPrepareStatement(cls));
+        }
         List<Object> clsGet = new ArrayList();
+        Field[] fields = cls.getDeclaredFields();
         try {
             Object object = cls.newInstance();
-            PreparedStatement psStmt = connection.prepareStatement(builder.toString());
+            PreparedStatement psStmt = connection.prepareStatement(mapPstmReadQuerys.get(cls).toString());
             ResultSet rs = psStmt.executeQuery();
             while (rs.next()) {
                 for (Field field : fields) {

@@ -22,7 +22,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import reflectionapi.DataBaseReflectionApi;
 import student.Student;
-import university.Specialty;
+import specialty.Specialty;
 
 /**
  *

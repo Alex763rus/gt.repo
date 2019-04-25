@@ -15,6 +15,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import reflectionapi.Autoincrement;
@@ -62,60 +63,33 @@ public class Student {
         StringBuilder builder = new StringBuilder();
         for (Student student : students) {
             try {
-                builder.append(mapper.writeValueAsString(student)).append(";");
+                builder.append(mapper.writeValueAsString(student)).append("\r\n");
             } catch (JsonProcessingException ex) {
                 log.error(ex);
                 throw new ReadWriteEx();
             }
         }
-        BufferedWriter bw = null;
-        try {
-            bw = new BufferedWriter(new FileWriter(path));
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
             bw.write(builder.toString());
         } catch (IOException ex) {
             log.error(ex);
             throw new ReadWriteEx();
-        } finally {
-            try {
-                bw.close();
-            } catch (IOException ex) {
-                throw new ReadWriteEx();
-            }
         }
         log.info("writeStudentToJson to path: " + path);
     }
 
     public static List<Student> readStudentToJson(String path) throws ReadWriteEx {
         List<Student> students = new ArrayList();
-        BufferedReader br = null;
-        StringBuilder builder = new StringBuilder();
-        try {
-            br = new BufferedReader(new FileReader(path));
+        ObjectMapper objectMapper = new ObjectMapper();
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             String str;
             while ((str = br.readLine()) != null) {
-                builder.append(str);
+                students.add(objectMapper.readValue(str, Student.class));
             }
-        } catch (NullPointerException | IOException ex) {
+        } catch (IOException ex) {
             log.error(ex);
             throw new ReadWriteEx();
-        } finally {
-            try {
-                br.close();
-            } catch (NullPointerException | IOException ex) {
-                log.error(ex);
-                throw new ReadWriteEx();
-            }
-        }
-
-        String[] strBuf = builder.toString().split(";");
-        for (String string : strBuf) {
-            ObjectMapper objectMapper = new ObjectMapper();
-            try {
-                students.add(objectMapper.readValue(string, Student.class));
-            } catch (IOException ex) {
-                log.error(ex);
-                throw new ReadWriteEx();
-            }
         }
         return students;
     }
@@ -139,10 +113,7 @@ public class Student {
             return false;
         }
         final Student other = (Student) obj;
-        if (this.id != other.id) {
-            return false;
-        }
-        return true;
+        return this.id == other.id;
     }
 
     public void setName(String name) {

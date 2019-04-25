@@ -9,17 +9,22 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import databases.SpecialtyDB;
 import databases.StudentDB;
+import exception.ClassValidationEx;
 import exception.DataBaseDisconnectEx;
 import exception.DataBaseEx;
+import exception.NullObjectEx;
 import exception.ReadWriteEx;
+import exception.ReflectiomApiNotAccessEx;
 import exception.ReflectionApiEx;
+import exception.ReflectionApiSQLEx;
 import exception.SpecialtySQLEx;
 import exception.StudentSQLEx;
 import reflectionapi.DataBaseReflectionApi;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import university.Specialty;
+import java.util.logging.Level;
+import specialty.Specialty;
 import student.Student;
 
 /**
@@ -31,27 +36,56 @@ public class MainApp {
     static final Logger log = LogManager.getLogger(MainApp.class);
 
     public static void main(String[] args) {
-        log.debug("StartHomeWork12");
+//        log.trace("Start HomeWork12");
+//        SpecialtyDB specialtyDB = null;
+//        try {
+//            specialtyDB = new SpecialtyDB();
+//        } catch (DataBaseEx ex) {
+//            log.trace(ex);
+//        }
+//        StudentDB studentDb = null;
+//        try {
+//            studentDb = new StudentDB();
+//        } catch (DataBaseEx ex) {
+//            log.trace(ex);
+//        }
+//        DataBaseReflectionApi reflectionDB = null;
+//        try {
+//            reflectionDB = new DataBaseReflectionApi();
+//        } catch (DataBaseEx ex) {
+//            log.trace(ex);
+//        }
+//        try {
+//            reflectionDB.save(new Student(876, "23", (float) 4.0, 1));
+//        } catch (ReflectionApiSQLEx ex) {
+//            java.util.logging.Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
+//        } catch (ReflectiomApiNotAccessEx ex) {
+//            java.util.logging.Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
+//        } catch (ClassValidationEx ex) {
+//            java.util.logging.Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
+//        } catch (NullObjectEx ex) {
+//            java.util.logging.Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+
+        //-------------
+        log.trace("Start HomeWork12");
         SpecialtyDB specialtyDB = null;
         try {
             specialtyDB = new SpecialtyDB();
         } catch (DataBaseEx ex) {
-            log.error(ex);
-            ex.printStackTrace();
+            log.trace(ex);
         }
         StudentDB studentDb = null;
         try {
             studentDb = new StudentDB();
         } catch (DataBaseEx ex) {
-            log.error(ex);
-            ex.printStackTrace();
+            log.trace(ex);
         }
         DataBaseReflectionApi reflectionDB = null;
         try {
             reflectionDB = new DataBaseReflectionApi();
         } catch (DataBaseEx ex) {
-            log.error(ex);
-            ex.printStackTrace();
+            log.trace(ex);
         }
         String[] commands = null;
         Scanner sc = new Scanner(System.in);
@@ -71,7 +105,7 @@ public class MainApp {
                                 studentDb.dropAndcreateTable();
                                 break;
                             default:
-                                printErrorArgument(Arrays.toString(commands));
+                                printErrorArgument(commands);
                         }
                         break;
                     case 2:
@@ -93,7 +127,7 @@ public class MainApp {
                                 }
                                 break;
                             default:
-                                printErrorArgument(Arrays.toString(commands));
+                                printErrorArgument(commands);
                         }
                         break;
                     case 5:
@@ -113,7 +147,7 @@ public class MainApp {
                                 Specialty.writeStudentToXML(specialtys, commands[2]);
                                 break;
                             default:
-                                printErrorArgument(Arrays.toString(commands));
+                                printErrorArgument(commands);
                         }
                         break;
                     case 7:
@@ -132,47 +166,48 @@ public class MainApp {
                     case 11:
                         reflectionDB.save(new Student(commands[1], Float.parseFloat(commands[2]), Integer.parseInt(commands[3])));
                         break;
+                    case 12:
+                        System.out.println(reflectionDB.read(commands[1]));
+                        break;
                     case 100:
                         break;
                     default:
-                        printErrorArgument(Arrays.toString(commands));
+                        printErrorArgument(commands);
+
                 }
                 System.out.print("==> Укажите режим работы:");
                 commands = sc.nextLine().split(";");
                 operType = commands[0].trim().contains("help") ? 0 : Integer.valueOf(commands[0]);
             } catch (NumberFormatException | ArrayIndexOutOfBoundsException ex) {
-                log.error(ex);
-                printErrorArgument(Arrays.toString(commands));
+                printErrorArgument(commands);
                 operType = 100;
             } catch (SpecialtySQLEx | StudentSQLEx | ReadWriteEx | ReflectionApiEx ex) {
-                log.error(ex);
-                ex.printStackTrace();
+                log.trace(ex);
                 operType = 100;
             }
 
         } while (operType != -1);
-        System.out.println("Конец работы");
-        log.debug("Конец работы");
+
         try {
             studentDb.disconnect();
         } catch (DataBaseDisconnectEx ex) {
-            ex.printStackTrace();
+            log.trace(ex);
         }
         try {
             specialtyDB.disconnect();
         } catch (DataBaseDisconnectEx ex) {
-            ex.printStackTrace();
+            log.trace(ex);
         }
         try {
             reflectionDB.disconnect();
         } catch (DataBaseDisconnectEx ex) {
-            ex.printStackTrace();
+            log.trace(ex);
         }
+        log.trace("END HomeWork12");
     }
 
-    public static void printErrorArgument(Object msg) {
-        log.info("Ошибка! Неверно указаны аргументы:" + msg);
-        System.out.println("Ошибка! Неверно указаны аргументы:" + msg);
+    public static void printErrorArgument(String[] arrays) {
+        log.trace("Ошибка! Неверно указаны аргументы:" + Arrays.toString(arrays));
     }
 
     static void printInfo() {
@@ -188,8 +223,9 @@ public class MainApp {
                 + "\r\nReflection API:"
                 + "\r\n  8)  Reflection Проверить класс на валидность:                 8;Полное имя класса"
                 + "\r\n  9)  Reflection DROP AND CREATE TABLE таблицы:                 9;Полное имя класса"
-                + "\r\n  10) Reflection API Добавить студента в БД:                    10;Название специальности; Описание специальности"
-                + "\r\n  11) Reflection API Добавить специальность в БД:               11;Имя;Средний балл;ID специальности"
+                + "\r\n  10) Reflection API Добавить специальность в БД:               10;Название специальности; Описание специальности"
+                + "\r\n  11) Reflection API Добавить студента в БД:                    11;Имя;Средний балл;ID специальности"
+                + "\r\n  12) Reflection API прочитать класс:                           12;Полное имя класса"
                 + "\r\n  12) Выход: -1"
                 + "\r\n   0) Помощь: 0"
                 + "\r\nИнформация:"

@@ -1,2 +1,5 @@
 /main.db
 *.db
+/hs_err_pid5744.log
+/qqq
+/ter.json

@@ -9,21 +9,16 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import databases.SpecialtyDB;
 import databases.StudentDB;
-import exception.ClassValidationEx;
 import exception.DataBaseDisconnectEx;
 import exception.DataBaseEx;
-import exception.NullObjectEx;
 import exception.ReadWriteEx;
-import exception.ReflectiomApiNotAccessEx;
 import exception.ReflectionApiEx;
-import exception.ReflectionApiSQLEx;
 import exception.SpecialtySQLEx;
 import exception.StudentSQLEx;
 import reflectionapi.DataBaseReflectionApi;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.logging.Level;
 import specialty.Specialty;
 import student.Student;
 
@@ -36,38 +31,6 @@ public class MainApp {
     static final Logger log = LogManager.getLogger(MainApp.class);
 
     public static void main(String[] args) {
-//        log.trace("Start HomeWork12");
-//        SpecialtyDB specialtyDB = null;
-//        try {
-//            specialtyDB = new SpecialtyDB();
-//        } catch (DataBaseEx ex) {
-//            log.trace(ex);
-//        }
-//        StudentDB studentDb = null;
-//        try {
-//            studentDb = new StudentDB();
-//        } catch (DataBaseEx ex) {
-//            log.trace(ex);
-//        }
-//        DataBaseReflectionApi reflectionDB = null;
-//        try {
-//            reflectionDB = new DataBaseReflectionApi();
-//        } catch (DataBaseEx ex) {
-//            log.trace(ex);
-//        }
-//        try {
-//            reflectionDB.save(new Student(876, "23", (float) 4.0, 1));
-//        } catch (ReflectionApiSQLEx ex) {
-//            java.util.logging.Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
-//        } catch (ReflectiomApiNotAccessEx ex) {
-//            java.util.logging.Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
-//        } catch (ClassValidationEx ex) {
-//            java.util.logging.Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
-//        } catch (NullObjectEx ex) {
-//            java.util.logging.Logger.getLogger(MainApp.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-
-        //-------------
         log.trace("Start HomeWork12");
         SpecialtyDB specialtyDB = null;
         try {

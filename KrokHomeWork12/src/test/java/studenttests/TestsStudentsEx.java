@@ -17,10 +17,10 @@ public class TestsStudentsEx {
 
     @Test(expected = ReadWriteEx.class)
     public void testReadWriteExNoFile() throws ReadWriteEx {
-        Student.readStudentToJson("");
+        Student.readStudentFromJson("");
     }
     @Test(expected = ReadWriteEx.class)
     public void testReadWriteExEmptFile() throws ReadWriteEx {
-        Student.readStudentToJson("Tests\\empt.json");
+        Student.readStudentFromJson("Tests\\empt.json");
     }
 }

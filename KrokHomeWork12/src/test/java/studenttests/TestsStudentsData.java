@@ -39,21 +39,21 @@ public class TestsStudentsData {
 
     @Test
     public void testStudentsEquals() throws ReadWriteEx {
-        Assert.assertTrue(Student.readStudentToJson(path).get(0).equals(student));
+        Assert.assertTrue(Student.readStudentFromJson(path).get(0).equals(student));
     }
 
     @Test
     public void testStudentsDataName() throws ReadWriteEx {
-        Assert.assertTrue(Student.readStudentToJson(path).get(0).getName().equals(student.getName()));
+        Assert.assertTrue(Student.readStudentFromJson(path).get(0).getName().equals(student.getName()));
     }
 
     @Test
     public void testStudentsDataAverageScore() throws ReadWriteEx {
-        Assert.assertTrue(Student.readStudentToJson(path).get(0).getAverageScore() == student.getAverageScore());
+        Assert.assertTrue(Student.readStudentFromJson(path).get(0).getAverageScore() == student.getAverageScore());
     }
 
     @Test
     public void testStudentsDataSpecialtyId() throws ReadWriteEx {
-        Assert.assertTrue(Student.readStudentToJson(path).get(0).getSpecialtyId() == student.getSpecialtyId());
+        Assert.assertTrue(Student.readStudentFromJson(path).get(0).getSpecialtyId() == student.getSpecialtyId());
     }
 }

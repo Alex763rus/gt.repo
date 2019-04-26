@@ -114,7 +114,7 @@ public class MainApp {
                         }
                         break;
                     case 7:
-                        studentDb.addStudent(Student.readStudentToJson(commands[1]));
+                        studentDb.addStudent(Student.readStudentFromJson(commands[1]));
                         break;
                     case 8:
                         System.out.println(reflectionDB.checkValidClass(commands[1]) ? "Валидный" : "Невалидный");

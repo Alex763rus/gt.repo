@@ -6,15 +6,18 @@
 package student;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import exception.ReadWriteEx;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import reflectionapi.Autoincrement;
@@ -59,18 +62,8 @@ public class Student {
 
     public static void writeStudentToJson(List<Student> students, String path) throws ReadWriteEx {
         ObjectMapper mapper = new ObjectMapper();
-        StringBuilder builder = new StringBuilder();
-        for (Student student : students) {
-            try {
-                builder.append(mapper.writeValueAsString(student)).append("\r\n");
-            } catch (JsonProcessingException ex) {
-                log.error(ex);
-                throw new ReadWriteEx();
-            }
-        }
-
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))) {
-            bw.write(builder.toString());
+        try {
+            mapper.writeValue(new File(path), students);
         } catch (IOException ex) {
             log.error(ex);
             throw new ReadWriteEx();
@@ -78,19 +71,17 @@ public class Student {
         log.info("writeStudentToJson to path: " + path);
     }
 
-    public static List<Student> readStudentToJson(String path) throws ReadWriteEx {
-        List<Student> students = new ArrayList();
-        ObjectMapper objectMapper = new ObjectMapper();
-        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-            String str;
-            while ((str = br.readLine()) != null) {
-                students.add(objectMapper.readValue(str, Student.class));
-            }
+    public static List<Student> readStudentFromJson(String path) throws ReadWriteEx {
+        List<Student> studentFromFile = null;
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            studentFromFile = mapper.readValue(new File(path), new TypeReference<List<Student>>() {
+            });
         } catch (IOException ex) {
             log.error(ex);
             throw new ReadWriteEx();
         }
-        return students;
+        return studentFromFile;
     }
 
     @Override
